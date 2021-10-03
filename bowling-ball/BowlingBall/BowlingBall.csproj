@@ -40,8 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BowlingFrameTypes\BonusRoll.cs" />
+    <Compile Include="FrameContract\BowlingFrame.cs" />
+    <Compile Include="FrameFactory\ServiceLocator.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="BowlingFrameTypes\RegularFrame.cs" />
+    <Compile Include="IGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BowlingFrameTypes\SpareFrame.cs" />
+    <Compile Include="BowlingFrameTypes\StrikeFrame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
