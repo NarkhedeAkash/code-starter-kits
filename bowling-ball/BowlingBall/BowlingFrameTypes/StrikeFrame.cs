@@ -19,7 +19,7 @@ namespace BowlingBall.BowlingFrameTypes
         /// <returns>Final fram escore</returns>
         public override int FrameScore()
         {
-            return 10 + FirstBonusBall() + SecondBonusBall();
+            return Bonus_Point + FirstBonusBall() + SecondBonusBall();
         }
 
         /// <summary>

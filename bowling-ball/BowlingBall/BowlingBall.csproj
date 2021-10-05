@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BowlingFrameTypes\BonusRoll.cs" />
+    <Compile Include="BowlingFrameTypes\BonusFrame.cs" />
     <Compile Include="FrameContract\BowlingFrame.cs" />
     <Compile Include="FrameFactory\ServiceLocator.cs" />
     <Compile Include="Game.cs" />
