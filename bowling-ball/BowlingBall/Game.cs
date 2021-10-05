@@ -24,16 +24,6 @@ namespace BowlingBall
         }
 
         /// <summary>
-        /// Adds regular frame
-        /// </summary>
-        /// <param name="firstThrow">First bowling throw</param>
-        /// <param name="secondThrow">Second bowling throw</param>
-        public void AddRegularFrame(int firstThrow, int secondThrow)
-        {
-            bowlingFrames.Add(ServiceLocator.GetInstance(typeof(RegularFrame).Name, bowlingThrowPoints, firstThrow, secondThrow));
-        }        
-
-        /// <summary>
         /// Calculates score of all frames for player
         /// </summary>
         /// <returns>Returns score</returns>
@@ -47,6 +37,16 @@ namespace BowlingBall
             }
 
             return finalScore;
+        }
+
+        /// <summary>
+        /// Adds regular frame
+        /// </summary>
+        /// <param name="firstThrow">First bowling throw</param>
+        /// <param name="secondThrow">Second bowling throw</param>
+        public void AddRegularFrame(int firstThrow, int secondThrow)
+        {
+            bowlingFrames.Add(ServiceLocator.GetInstance(typeof(RegularFrame).Name, bowlingThrowPoints, firstThrow, secondThrow));
         }
 
         /// <summary>

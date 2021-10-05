@@ -6,7 +6,7 @@ namespace BowlingBall.Tests
     [TestClass]
     public class GameFixture
     {
-        Game game;
+        IGame game;
 
         public GameFixture()
         {
@@ -149,7 +149,7 @@ namespace BowlingBall.Tests
         /// <param name="firstThrow">First throw value</param>
         /// <param name="secondThrow">second throw value</param>
         /// <param name="times">No of frames</param>
-        private void Roll(Game game, int firstThrow, int secondThrow, int times)
+        private void Roll(IGame game, int firstThrow, int secondThrow, int times)
         {
             for (int i = 0; i < times; i++)
             {
