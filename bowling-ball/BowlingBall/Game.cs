@@ -15,6 +15,11 @@ namespace BowlingBall
         ArrayList bowlingThrowPoints;
 
         /// <summary>
+        /// Total no of pins
+        /// </summary>
+        public const int Total_No_Of_Pins = 10;
+
+        /// <summary>
         /// Initializes game
         /// </summary>
         public Game()
@@ -56,7 +61,9 @@ namespace BowlingBall
         /// <param name="secondThrow">Second bowling throw</param>
         public void AddSpareFrame(int firstThrow, int secondThrow)
         {
-            bowlingFrames.Add(new SpareFrame(bowlingThrowPoints, firstThrow, secondThrow));
+            //bowlingFrames.Add(new SpareFrame(bowlingThrowPoints, firstThrow, secondThrow));
+
+            bowlingFrames.Add(ServiceLocator.GetInstance(typeof(SpareFrame).Name, bowlingThrowPoints, firstThrow, secondThrow));
         }
 
         /// <summary>
@@ -83,15 +90,15 @@ namespace BowlingBall
         /// <param name="secondThrowScore">Second bowling throw</param>
         public void Roll(int firstThrowScore, int secondThrowScore)
         {
-            if (firstThrowScore == 10)
+            if (firstThrowScore == Total_No_Of_Pins)
             {
                 AddStrikeFrame();
             }
-            else if (firstThrowScore + secondThrowScore < 10)
+            else if (firstThrowScore + secondThrowScore < Total_No_Of_Pins)
             {
                 AddRegularFrame(firstThrowScore, secondThrowScore);
             }
-            else if (firstThrowScore + secondThrowScore == 10)
+            else if (firstThrowScore + secondThrowScore == Total_No_Of_Pins)
             {
                 AddSpareFrame(firstThrowScore, secondThrowScore);
             }

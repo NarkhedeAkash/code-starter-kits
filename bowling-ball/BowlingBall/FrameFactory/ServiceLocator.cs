@@ -21,7 +21,7 @@ namespace BowlingBall.FrameFactory
             {
                 return new RegularFrame(points, firstThrow, secondThrow);
             }
-            if (frameType == typeof(RegularFrame).Name)
+            if (frameType == typeof(SpareFrame).Name)
             {
                 return new SpareFrame(points, firstThrow, secondThrow);
             }
